@@ -1,0 +1,33 @@
+src/main/java/com/example/SpringBootBasics
+│
+├── domain
+│   ├── order
+│   │   ├── model
+│   │   │   ├── Order.java
+│   │   │   ├── ResponseDto.java
+│   │   │   └── Status.java
+│   │   └── service
+│   │       └── OrderService.java
+│   └── anotherDomain
+│       ├── model
+│       └── service
+│
+├── application
+│   ├── order
+│   │   └── OrderApplicationService.java
+│   └── anotherDomain
+│       └── AnotherDomainApplicationService.java
+│
+├── infrastructure
+│   ├── order
+│   │   ├── repository
+│   │   └── configuration
+│   └── anotherDomain
+│       ├── repository
+│       └── configuration
+│
+└── interfaces
+  ├── order
+  │   └── OrderController.java
+  └── anotherDomain
+      └── AnotherDomainController.java
