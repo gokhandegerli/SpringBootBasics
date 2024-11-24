@@ -1,8 +1,8 @@
 package com.degerli.SpringBootBasics.application.order;
 
-import com.degerli.SpringBootBasics.domain.order.Order;
-import com.degerli.SpringBootBasics.domain.order.ResponseDto;
-import com.degerli.SpringBootBasics.domain.service.OrderService;
+import com.degerli.SpringBootBasics.domain.order.model.Order;
+import com.degerli.SpringBootBasics.domain.order.model.ResponseDto;
+import com.degerli.SpringBootBasics.domain.order.service.OrderService;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,8 +1,8 @@
-package com.degerli.SpringBootBasics.domain.service;
+package com.degerli.SpringBootBasics.domain.order.service;
 
-import com.degerli.SpringBootBasics.domain.order.Order;
-import com.degerli.SpringBootBasics.domain.order.ResponseDto;
-import com.degerli.SpringBootBasics.domain.order.Status;
+import com.degerli.SpringBootBasics.domain.order.model.Order;
+import com.degerli.SpringBootBasics.domain.order.model.ResponseDto;
+import com.degerli.SpringBootBasics.domain.order.model.Status;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;

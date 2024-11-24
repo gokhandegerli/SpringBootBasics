@@ -2,9 +2,9 @@ package com.degerli.SpringBootBasics.interfaces.order;
 
 
 import com.degerli.SpringBootBasics.application.order.OrderApplicationService;
-import com.degerli.SpringBootBasics.domain.order.Order;
-import com.degerli.SpringBootBasics.domain.order.ResponseDto;
-import com.degerli.SpringBootBasics.domain.order.Status;
+import com.degerli.SpringBootBasics.domain.order.model.Order;
+import com.degerli.SpringBootBasics.domain.order.model.ResponseDto;
+import com.degerli.SpringBootBasics.domain.order.model.Status;
 import java.util.Collections;
 import java.util.List;
 import lombok.RequiredArgsConstructor;

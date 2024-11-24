@@ -1,4 +1,4 @@
-package com.degerli.SpringBootBasics.domain.order;
+package com.degerli.SpringBootBasics.domain.order.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
