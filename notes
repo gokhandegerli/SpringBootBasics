@@ -1,3 +1,5 @@
+DDD Structure:
+
 src/main/java/com/example/SpringBootBasics
 │
 ├── domain
@@ -31,3 +33,17 @@ src/main/java/com/example/SpringBootBasics
   │   └── OrderController.java
   └── anotherDomain
       └── AnotherDomainController.java
+
+---
+
+Greeting explanation:
+Service Interface (GreetingService): Defines the contract for greeting services.
+Basic Service (SimpleGreetingService): Provides a simple implementation of the greeting service.
+Decorator (GreetingServiceDecorator): Wraps the basic service and adds additional behavior. It is marked with @Primary to ensure it is the default implementation used by Spring.
+Controller (GreetingController): Uses the GreetingService to handle HTTP requests.
+This setup allows you to easily extend the functionality of the GreetingService without modifying the existing code, adhering to the Open/Closed Principle.
+
+---
+
+
+
