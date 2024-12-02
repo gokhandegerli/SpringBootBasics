@@ -7,22 +7,26 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 
 @Service
+@Slf4j
 public class OrderService {
 
   public boolean processPayment(Order order) {
-    System.out.println("Processing payment for order: " + order.getId());
+    log.info("Processing payment for order:{}", order.getId());
     return true; // Assume payment is successful
   }
 
   @Async
+  // This annotation allows the method to be executed asynchronously in a separate thread.
   public CompletableFuture<ResponseDto> cookPizza(Order order) {
-    System.out.println("Cooking pizza for order: " + order.getId());
+    log.info("Cooking pizza for order: {}", order.getId());
     try {
-      Thread.sleep(5000); // Simulate time taken to cook pizza
+      Thread.sleep(5000); // Simulate time taken to cook the pizza. In a real implementation,
+      // replace this with the actual cooking logic.
       return CompletableFuture.completedFuture(
           new ResponseDto("Pizza cooked", Status.SUCCESS));
     } catch (InterruptedException e) {
@@ -33,7 +37,7 @@ public class OrderService {
 
   @Async
   public CompletableFuture<ResponseDto> preparePizzaBox(Order order) {
-    System.out.println("Preparing pizza box for order: " + order.getId());
+    log.info("Preparing pizza box for order: {}", order.getId());
     try {
       Thread.sleep(2000); // Simulate time taken to prepare pizza box
       return CompletableFuture.completedFuture(
@@ -46,7 +50,7 @@ public class OrderService {
 
   @Async
   public CompletableFuture<ResponseDto> prepareDrinks(Order order) {
-    System.out.println("Preparing drinks for order: " + order.getId());
+    log.info("Preparing drinks for order: {}", order.getId());
     try {
       Thread.sleep(3000); // Simulate time taken to prepare drinks
       return CompletableFuture.completedFuture(
