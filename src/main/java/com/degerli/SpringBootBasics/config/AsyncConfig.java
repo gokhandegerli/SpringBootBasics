@@ -8,7 +8,8 @@ import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 import java.util.concurrent.Executor;
 
 @Configuration
-@EnableAsync // Enables Spring's asynchronous method execution capability
+@EnableAsync // Enables Spring's asynchronous method execution capability, no more need to
+// add this on Main App class.
 public class AsyncConfig {
   @Bean(name = "taskExecutor")
   // This indicates that the method taskExecutor() will produce a bean that will be managed
@@ -20,9 +21,9 @@ public class AsyncConfig {
     // executing tasks asynchronously. This method will be called by Spring to create and
     // configure the task executor bean.
     ThreadPoolTaskExecutor executor = new ThreadPoolTaskExecutor();
-    executor.setCorePoolSize(5);
-    executor.setMaxPoolSize(10);
-    executor.setQueueCapacity(100);
+    executor.setCorePoolSize(5); // Minimum number of threads
+    executor.setMaxPoolSize(10); // Maximum number of threads
+    executor.setQueueCapacity(100); // Queue size
     executor.initialize();
     return executor;
   }

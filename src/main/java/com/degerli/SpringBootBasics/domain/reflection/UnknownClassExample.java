@@ -9,7 +9,6 @@ public class UnknownClassExample {
   public static void main(String[] args) {
     try {
       // Class name is provided at runtime (e.g., from user input or a config file)
-      //      String className = "MyClass"; // This could be any class name
       String className
           = "com.degerli.SpringBootBasics.domain.reflection.MyClass";// This could be any
       // class name
@@ -26,6 +25,8 @@ public class UnknownClassExample {
       for (Method method : clazz.getDeclaredMethods()) {
         log.info("- {} ", method.getName());
       }
+
+      log.info("HashCode of class '{}' is {}", clazz, clazz.hashCode());
 
     } catch (ClassNotFoundException e) {
       log.error("Class not found: {}", e.getMessage());
